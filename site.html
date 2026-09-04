@@ -1028,6 +1028,86 @@
             margin-top: 1.5rem;
         }
 
+        /* Heartfelt Personal Wish from Abhay */
+        .abhay-wish-card {
+            background: linear-gradient(135deg, rgba(212,175,55,0.12), rgba(249,115,22,0.08), rgba(8,145,178,0.08));
+            border: 1px solid rgba(212,175,55,0.4);
+            border-radius: 1.25rem;
+            padding: 2.5rem 2rem;
+            margin: 0 auto 3rem;
+            max-width: 620px;
+            backdrop-filter: blur(14px);
+            box-shadow: 0 0 40px rgba(212,175,55,0.15), inset 0 0 25px rgba(212,175,55,0.06);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+        }
+        .abhay-wish-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(212,175,55,0.7);
+            box-shadow: 0 0 60px rgba(212,175,55,0.28), inset 0 0 30px rgba(212,175,55,0.1);
+        }
+        .abhay-wish-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 3px;
+            background: linear-gradient(90deg, transparent, #fef08a, var(--gold), #f97316, transparent);
+        }
+        .wish-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 1.2rem;
+            border-radius: 99px;
+            background: rgba(212,175,55,0.18);
+            border: 1px solid rgba(212,175,55,0.45);
+            color: var(--gold-lt);
+            font-family: 'Cinzel', serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            margin-bottom: 1.2rem;
+        }
+        .wish-headline {
+            font-family: 'Cinzel Decorative', 'Cinzel', serif;
+            font-size: clamp(1.45rem, 4vw, 2.1rem);
+            font-weight: 700;
+            color: #fef08a;
+            text-shadow: 0 0 24px rgba(254,240,138,0.6);
+            line-height: 1.3;
+            margin-bottom: 0.9rem;
+        }
+        .wish-text {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(0.95rem, 2.2vw, 1.1rem);
+            font-style: italic;
+            color: rgba(253,251,247,0.92);
+            line-height: 1.75;
+            margin-bottom: 1.4rem;
+        }
+        .wish-author {
+            font-family: 'Cinzel', serif;
+            font-size: 0.88rem;
+            letter-spacing: 0.1em;
+            color: var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(212,175,55,0.2);
+        }
+        .wish-author .author-name {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #ffffff;
+            text-shadow: 0 0 16px rgba(212,175,55,0.9), 0 0 30px rgba(249,115,22,0.6);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
         /* ============================================================
            LAYOUT HELPERS
         ============================================================ */
@@ -1725,7 +1805,21 @@
     <!-- FOOTER                                                       -->
     <!-- ============================================================ -->
     <footer>
-        <div style="max-width:640px;margin:0 auto;">
+        <div style="max-width:680px;margin:0 auto;">
+            <!-- Heartfelt Personal Wish from Abhay -->
+            <div class="abhay-wish-card">
+                <div class="wish-badge">🪷 Devotional Greetings 🪷</div>
+                <h3 class="wish-headline">Happy Shri Krishna Janmashtami!</h3>
+                <p class="wish-text">
+                    "May the divine flute of Lord Krishna enchant your life with eternal happiness, peace, love, health, and limitless prosperity."
+                </p>
+                <div class="wish-author">
+                    <span>❤️ With warm wishes &amp; love from the bottom of the heart of</span>
+                    <span class="author-name">Abhay</span>
+                    <span>🙏🪈</span>
+                </div>
+            </div>
+
             <div class="footer-om">ॐ Namo Bhagavate Vasudevaya</div>
             <p class="footer-verse">
                 "Sarva-dharmān parityajya mām ekaṁ śaraṇaṁ vraja |<br>
